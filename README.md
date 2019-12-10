@@ -1,9 +1,9 @@
 # Go Prod Info Log Bench
 
-tl;dr - **Avoid info logging WithFields in the hot path of performance sensitive applications.**
-
 This repository contains tests to illustrate the performance costs of INFO and DEBUG logs in environments
 where the log level is set to WARN.
+
+tl;dr - **Avoid info logging WithFields in the hot path of performance sensitive applications.**
 
 ---
 
