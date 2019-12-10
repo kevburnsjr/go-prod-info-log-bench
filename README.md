@@ -1,5 +1,7 @@
 # Go Prod Info Log Bench
 
+tl;dr - **Avoid info logging WithFields in the hot path of performance sensitive applications.**
+
 This repository contains tests to illustrate the performance costs of INFO and DEBUG logs in environments
 where the log level is set to WARN.
 
@@ -44,7 +46,7 @@ ok      github.com/main 16.594s
 Some interesting things:
 
 1) Logrus is the most performant for ignored static info logging
-2) Zap sugar is more performant than regular zap for ignored WithFields info logs in prod ¯\\\_(?)\_/¯
+2) Zap sugar is more performant than regular zap for ignored WithFields info logs in prod Â¯\\\_(?)\_/Â¯
 3) **Ignored WithFields info logging can cost 0.1 - 0.5 microseconds in production**
 
 ## Conclusion
